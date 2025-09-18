@@ -27,7 +27,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 20px;
+        padding: 20px 20px;
         box-shadow: -9px 0px 11px #88878761;
         position: sticky;
         background-color: rgb(255, 255, 255);
@@ -35,22 +35,35 @@
 
     /* decorating sidebar */
     .sidebar {
-       position: fixed;
+        position: fixed;
         z-index: 10;
-        left:0;
+        left: -400px;
         top: 0;
-        width: 30%;
+        width: 380px;
         height: 100vh;
         background-color: rgb(255, 255, 253);
-        display: flex;
-        list-style: none;
-        flex-direction: column;
         padding-top: 70px;
         padding-left: 20px;
         font-size: 18px;
+        box-shadow: 1px 1px 5px 4px #00000024;
+        transition: all 0.2s ease-in;
     }
 
-   
+
+
+    .sidebar .ul {
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+
+    }
+
+    .sidebar img {
+        width: 30px;
+        position: relative;
+        left: 90%;
+        top: -50px;
+    }
 
     .sidebar li {
         padding: 10px;
@@ -67,8 +80,22 @@
 
     /* decorating nav bar items */
     .heading h1 {
-
+        padding: 0px 10px;
         font-family: cursive;
+    }
+
+
+    .heading img {
+        width: 36px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
     }
 
     .info ul {
@@ -78,7 +105,7 @@
     }
 
     .info ul li {
-        padding: 20px;
+        padding: 0px 20px;
         font-size: 18px;
         font-weight: 500;
         cursor: pointer;
@@ -91,11 +118,6 @@
 
     .info li a:hover {
         color: rgba(128, 6, 185, 0.954);
-        text-decoration: underline;
-        text-decoration-thickness: 3px;
-        text-underline-offset: 4px;
-
-
     }
 
     .icons {
@@ -226,3 +248,50 @@
     }
 
     /* media query before 1000px */
+
+    @media (max-width:1000px) {
+        .heading img {
+            display: block;
+        }
+
+        .info {
+            display: none;
+        }
+
+        .hero-section {
+            position: relative;
+        }
+
+        .left {
+            position: relative;
+            top: 100px;
+            right: -33px;
+        }
+
+        .head h1 {
+            font-size: 40px;
+        }
+
+        .sub-head p {
+            font-size: 15px;
+        }
+
+        .left button {
+            padding: 9px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width : 680px) {
+        .icons img {
+            width: 20px;
+        }
+
+        .heading h1 {
+            font-size: 27px;
+        }
+
+        .heading img {
+            width: 25px;
+        }
+    }
