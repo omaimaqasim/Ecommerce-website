@@ -1,24 +1,20 @@
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&family=Playwrite+GB+J+Guides:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-
-
+    /* Global Reset */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
-        ;
     }
 
     html,
     body {
         position: relative;
         /* overflow-x: hidden; */
-
     }
 
-    /* decorating nav bar */
+    /* ================== NAVBAR ================== */
     .nav {
         width: 100%;
         max-width: 100vw;
@@ -33,7 +29,7 @@
         background-color: rgb(255, 255, 255);
     }
 
-    /* decorating sidebar */
+    /* Sidebar */
     .sidebar {
         position: fixed;
         z-index: 10;
@@ -49,13 +45,10 @@
         transition: all 0.2s ease-in;
     }
 
-
-
     .sidebar .ul {
         display: flex;
         list-style: none;
         flex-direction: column;
-
     }
 
     .sidebar img {
@@ -78,19 +71,7 @@
         color: rgba(128, 6, 185, 0.954);
     }
 
-    /* decorating nav bar items */
-    .heading h1 {
-        padding: 0px 10px;
-        font-family: cursive;
-    }
-
-
-    .heading img {
-        width: 36px;
-        cursor: pointer;
-        display: none;
-    }
-
+    /* Navbar Heading */
     .heading {
         display: flex;
         align-items: center;
@@ -98,6 +79,18 @@
         gap: 5px;
     }
 
+    .heading h1 {
+        padding: 0px 10px;
+        font-family: cursive;
+    }
+
+    .heading img {
+        width: 36px;
+        cursor: pointer;
+        display: none;
+    }
+
+    /* Navbar Info */
     .info ul {
         display: flex;
         align-items: center;
@@ -120,24 +113,22 @@
         color: rgba(128, 6, 185, 0.954);
     }
 
+    /* Navbar Icons */
     .icons {
         display: flex;
         gap: 18px;
-
     }
 
     .icons img {
         cursor: pointer;
         transition: all 0.2s ease;
-
     }
 
     .icons img:hover {
         transform: scale(1.2);
     }
 
-    /* decorating hero section */
-
+    /* ================== HERO SECTION ================== */
     .hero-section {
         background: linear-gradient(to right, #e5b3ac, #cbb9e7);
         display: flex;
@@ -145,8 +136,6 @@
         flex-wrap: wrap;
         min-height: 350px;
         width: 100%;
-
-
     }
 
     .left {
@@ -158,13 +147,11 @@
         flex-direction: column;
         align-items: center;
         gap: 8px;
-
     }
 
     .left h1 {
         font-size: 53px;
         font-family: cursive;
-
     }
 
     .left .sub-head {
@@ -185,13 +172,11 @@
     .left button:hover {
         transform: scale(1.1);
         background-color: rgb(165, 129, 242);
-
     }
 
     .left>* {
         text-align: center;
     }
-
 
     .right {
         width: 50%;
@@ -205,8 +190,7 @@
         object-fit: contain;
     }
 
-    /* categories sec */
-
+    /* ================== CATEGORIES ================== */
     .categories-sec {
         display: flex;
         flex-direction: column;
@@ -217,24 +201,86 @@
 
     .categories-sec h1 {
         padding: 20px;
+        font-family: cursive;
+        font-size: 40px;
     }
 
-    .categories {
-        border: solid black;
-        padding: 20px;
+    .categories-sliding {
+        overflow: hidden;
+        width: 70vw;
+        padding: 10px;
+        margin: auto;
+        border-radius: 20px;
+        background: #fff;
+        position: relative;
+    }
+
+    /* Track that holds all the cards */
+    .categories-track {
         display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-
-    }
-
-    .categories>* {
-        border: solid black;
+        gap: 20px;
+        animation: scroll 20s linear infinite;
         padding: 20px;
+
     }
 
-    /* category card */
+    .categories-track:hover {
+        animation-play-state: paused;
+    }
 
+    /* GRADIENT SHADOWS */
+    .categories-sliding::before,
+    .categories-sliding::after {
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: 10%;
+        z-index: 2;
+    }
+
+    .categories-sliding::before {
+        left: 0;
+        top: 0;
+    }
+
+    .categories-sliding::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    .category-card {
+        min-width: 180px;
+        border: none;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.386);
+        padding: 20px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease;
+
+    }
+  
+.category-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.317);
+}
+
+  
+    /* Category Card */
     .category-card h2 {
         font-weight: 500;
         font-size: 20px;
@@ -247,8 +293,7 @@
         object-fit: contain;
     }
 
-    /* media query before 1000px */
-
+    /* ================== MEDIA QUERIES ================== */
     @media (max-width:1000px) {
         .heading img {
             display: block;
@@ -282,7 +327,7 @@
         }
     }
 
-    @media (max-width : 680px) {
+    @media (max-width:680px) {
         .icons img {
             width: 20px;
         }
