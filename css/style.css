@@ -6,12 +6,17 @@
         padding: 0;
         box-sizing: border-box;
         font-family: "Poppins", sans-serif;
+
     }
 
     html,
     body {
         position: relative;
         /* overflow-x: hidden; */
+    }
+
+    :root {
+        --main-color: rgba(177, 80, 238, 0.954);
     }
 
     /* ================== NAVBAR ================== */
@@ -164,14 +169,16 @@
         font-weight: 500;
         border-radius: 5px;
         border: none;
-        background-color: rgb(173, 139, 247);
+        background-color: rgb(154, 114, 240);
         transition: all 0.5s ease;
         box-shadow: 0px 0px 7px #7c7ce8;
+        cursor: pointer;
     }
 
     .left button:hover {
         transform: scale(1.1);
         background-color: rgb(165, 129, 242);
+
     }
 
     .left>* {
@@ -194,12 +201,14 @@
     .categories-sec {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
         padding: 15px;
     }
 
-    .categories-sec h1 {
+
+    .categories-sec h1,
+    .products-sec h1 {
+        text-align: center;
         padding: 20px;
         font-family: cursive;
         font-size: 40px;
@@ -213,6 +222,7 @@
         border-radius: 20px;
         background: #fff;
         position: relative;
+        min-height: 32vh;
     }
 
     /* Track that holds all the cards */
@@ -263,7 +273,7 @@
     .category-card {
         min-width: 180px;
         border: none;
-       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.386);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.386);
         padding: 20px;
         border-radius: 15px;
         display: flex;
@@ -271,20 +281,22 @@
         align-items: center;
         justify-content: center;
         transition: all 0.5s ease;
+        cursor: pointer;
 
     }
-  
-.category-card:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.317);
-}
 
-  
+    .category-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.317);
+    }
+
+
     /* Category Card */
     .category-card h2 {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
+        padding-top: 10px;
     }
 
     .category-card img {
@@ -292,6 +304,101 @@
         height: 150px;
         object-fit: contain;
     }
+
+    /* products sec decoration */
+    .products-sec {
+        border: solid black;
+
+    }
+
+    .products {
+        min-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .product-card {
+        display: flex;
+        flex-direction: column;
+        border: solid rgba(44, 43, 43, 0.21);
+        border-radius: 4px;
+    }
+
+    .product-card>* {
+        margin-bottom: 10px;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .product-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 29px;
+
+
+    }
+
+    .product-name {
+        padding-right: 15px;
+        font-weight: 500;
+        font-size: 1.1em;
+        cursor: pointer;
+
+    }
+
+    .left-side p {
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .left-side p:hover {
+        color: var(--main-color);
+    }
+
+    .product-name:hover {
+        color: var(--main-color)
+    }
+
+    .product-price {
+        text-align: end;
+        font-size: 20px;
+    }
+
+    .product-icons {
+        display: flex;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .product-icons>* {
+        width: 50%;
+        height: 57px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        transition: all 0.2s ease;
+        background-color: white;
+    }
+
+    .product-icons>*:hover {
+        background-color: rgba(134, 55, 237, 0.776);
+    }
+
+    .product-icons>*:hover svg path,
+    .product-icons>*:hover svg circle {
+        stroke: white;
+    }
+
+
+
 
     /* ================== MEDIA QUERIES ================== */
     @media (max-width:1000px) {
@@ -340,3 +447,18 @@
             width: 25px;
         }
     }
+
+    @media (max-width:1020px) {
+        .products {
+            grid-template-columns: repeat(2, 300px);
+
+        }
+    }
+
+      @media (max-width:666px) {
+         .products {
+            grid-template-columns: repeat(1, 300px);
+
+        }
+      }
+      
