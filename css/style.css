@@ -306,11 +306,6 @@
     }
 
     /* products sec decoration */
-    .products-sec {
-        border: solid black;
-
-    }
-
     .products {
         min-width: 100%;
         display: grid;
@@ -335,6 +330,11 @@
         height: 300px;
         object-fit: cover;
     }
+
+    .products .product-card:nth-last-child(2) img {
+        object-fit: contain;
+    }
+
 
     .product-content {
         display: flex;
@@ -455,10 +455,9 @@
         }
     }
 
-      @media (max-width:666px) {
-         .products {
+    @media (max-width:666px) {
+        .products {
             grid-template-columns: repeat(1, 300px);
 
         }
-      }
-      
+    }
