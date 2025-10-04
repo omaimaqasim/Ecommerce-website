@@ -17,6 +17,7 @@
 
     :root {
         --main-color: rgba(177, 80, 238, 0.954);
+        --main-font-style: cursive;
     }
 
     /* ================== NAVBAR ================== */
@@ -37,18 +38,23 @@
     /* Sidebar */
     .sidebar {
         position: fixed;
-        z-index: 10;
+        z-index: 99999999;
         left: -400px;
         top: 0;
         width: 380px;
         height: 100vh;
         background-color: rgb(255, 255, 253);
-        padding-top: 70px;
+        padding-top: 10px;
         padding-left: 20px;
         font-size: 18px;
         box-shadow: 1px 1px 5px 4px #00000024;
         transition: all 0.2s ease-in;
     }
+
+    .sidebar h1 {
+        font-family: var(--main-font-style)
+    }
+
 
     .sidebar .ul {
         display: flex;
@@ -60,7 +66,8 @@
         width: 30px;
         position: relative;
         left: 90%;
-        top: -50px;
+        top: -42px;
+        cursor: pointer;
     }
 
     .sidebar li {
@@ -86,7 +93,7 @@
 
     .heading h1 {
         padding: 0px 10px;
-        font-family: cursive;
+        font-family: var(--main-font-style);
     }
 
     .heading img {
@@ -122,6 +129,7 @@
     .icons {
         display: flex;
         gap: 18px;
+        position: relative;
     }
 
     .icons img {
@@ -131,6 +139,22 @@
 
     .icons img:hover {
         transform: scale(1.2);
+    }
+
+    .icons .itemcount {
+        background-color: rgba(197, 124, 226, 0.644);
+        padding: 10px;
+        border-radius: 50%;
+        width: 23px;
+        height: 23px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        right: 15%;
+        top: -9px;
+
     }
 
     /* ================== HERO SECTION ================== */
@@ -203,6 +227,9 @@
         flex-direction: column;
         gap: 15px;
         padding: 15px;
+        position: relative;
+        z-index: -1;
+
     }
 
 
@@ -397,6 +424,60 @@
         stroke: white;
     }
 
+    /* my card section styling */
+    .my_card_section {
+        position: fixed;
+        top: 0;
+        z-index: 9999;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        right: 0;
+        width: 430px;
+        padding: 15px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 1px 1px 5px 4px #00000024;
+        transition: all 0.2s ease-in;
+
+    }
+
+    .my_card_section h1 {
+        font-family: var(--main-font-style);
+        text-align: center;
+        font-size: 27px;
+        padding-bottom: 20px;
+    }
+
+    .item_section {
+        width: 100%;
+    }
+
+    .item {
+        border: solid rgba(54, 54, 54, 0.176);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px;
+       
+    }
+
+    .item_pic {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .item_pic img {
+        width: 100%;
+        border-radius: 50%;
+        border: solid rgba(104, 103, 103, 0.291);
+        object-fit: contain;
+    }
+
+
 
 
 
@@ -412,6 +493,7 @@
 
         .hero-section {
             position: relative;
+            z-index: -1;
         }
 
         .left {
@@ -432,6 +514,7 @@
             padding: 9px;
             font-size: 14px;
         }
+
     }
 
     @media (max-width:680px) {

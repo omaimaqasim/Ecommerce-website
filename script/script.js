@@ -16,6 +16,7 @@ let info = document.querySelector(".info")
 
  cross.addEventListener("click" ,(e)=>{
   document.querySelector(".sidebar").style.left = "-400px" 
+ 
  })
 
 
