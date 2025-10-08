@@ -470,20 +470,30 @@
     .item_pic {
         width: 70px;
         height: 70px;
+        overflow: hidden;
+        flex-shrink: 0;
 
+    }
+    .item_name {
+        font-size: 13px;
+    }
+    .item_price{
+        font-size: 13px;
     }
 
     .item_pic img {
         width: 100%;
+        height: 100%;
+        object-fit: cover !important;
         border-radius: 50%;
         border: solid rgba(104, 103, 103, 0.291);
         object-fit: contain;
-    }
+    } 
 
     .inc_dec_section {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 14px;
 
     }
 
