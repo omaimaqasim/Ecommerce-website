@@ -54,9 +54,9 @@ Array.from(shop_carts).forEach(cart_btn => {
 Array.from(shop_carts).forEach(cart_btn => {
      cart_btn.addEventListener("click", () => {
           let product_card = cart_btn.closest(".product-card")
+          let product_price = product_card.querySelector(".product-price").textContent
           let product_pic = product_card.querySelector("img").src
           let product_name = product_card.querySelector(".product-name").textContent
-          let product_price = product_card.querySelector(".product-price").textContent
 
           // now adding item to shooping card
           let item_section = document.querySelector(".item_section")
@@ -69,7 +69,7 @@ Array.from(shop_carts).forEach(cart_btn => {
       <div class="inc_dec_section">
         <span class="increase">+</span>
         <span class="item_quantity">1</span>
-        <span class="decrease" hidden>-</span>
+        <span class="decrease hidden" >-</span>
         <svg  class="delete_icon " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
         fill="none">
         <path
@@ -89,37 +89,47 @@ Array.from(shop_carts).forEach(cart_btn => {
 // add listener to inc and dec btn
 
 let item_section = document.querySelector(".item_section")
-  
-item_section.addEventListener("click" ,(e)=>{
-     
-    let dec_btn =  e.target.closest(".decrease")
-    let section = e.target.closest(".inc_dec_section")
-    let quantityDiv = section.querySelector(".item_quantity")
 
+item_section.addEventListener("click", (e) => {
+     let section = e.target.closest(".inc_dec_section");
+     let dec_btn = section.querySelector(".decrease");
+     let quantityDiv = section.querySelector(".item_quantity");
+     let delete_icon = section.querySelector(".delete_icon");
+     // price logic pending
+     let item_price = e.target.closest(".item").querySelector(".item_price")
+       
+     // Convert to number each time
+     let item_quantity = Number(quantityDiv.innerHTML);
 
-    if (e.target.closest(".increase")) {
-         quantityDiv.innerHTML = parseInt(quantityDiv.innerHTML) + 1
-        
-    }
-    if (e.target.closest(".decrease")) {
-     if (quantityDiv.innerHTML === "1") {
-     //    pending
-          
-     }else{
-
-          quantityDiv.innerHTML = parseInt(quantityDiv.innerHTML) - 1
+     // Increase
+     if (e.target.closest(".increase")) {
+          item_quantity++;
+          quantityDiv.innerHTML = item_quantity;
      }
-    }
-})
 
-// use event integration
+     // Decrease
+     if (e.target.closest(".decrease")) {
+          if (item_quantity > 1) {
+               item_quantity--;
+               quantityDiv.innerHTML = item_quantity;
+          }
+     }
 
-// Array.from(inc_btns).forEach(btn=>{
-//      btn.addEventListener("click" ,(click_btn)=>{
-//           click_btn.closest(".item_quantity")
-//           console.log("yes")
-//      })
-// })
+     // ✅ Update visibility after updating quantity
+     if (item_quantity > 1) {
+          dec_btn.classList.remove("hidden");      // show "-"
+          delete_icon.classList.add("hidden");     // hide trash
+     } else {
+          dec_btn.classList.add("hidden");         // hide "-"
+          delete_icon.classList.remove("hidden");  // show trash
+     }
+
+     // delete item if click on delete_icon
+     if (e.target.classList.contains("delete_icon")) {
+          e.target.closest(".item").remove()
+     }
+});
+
 
 
 
