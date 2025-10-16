@@ -95,11 +95,11 @@ item_section.addEventListener("click", (e) => {
      let dec_btn = section.querySelector(".decrease");
      let quantityDiv = section.querySelector(".item_quantity");
      let delete_icon = section.querySelector(".delete_icon");
-     // price logic pending
+     // price logic 
      let item_price = e.target.closest(".item").querySelector(".item_price")
-       
      // Convert to number each time
      let item_quantity = Number(quantityDiv.innerHTML);
+
 
      // Increase
      if (e.target.closest(".increase")) {
@@ -112,6 +112,7 @@ item_section.addEventListener("click", (e) => {
           if (item_quantity > 1) {
                item_quantity--;
                quantityDiv.innerHTML = item_quantity;
+
           }
      }
 
@@ -123,6 +124,18 @@ item_section.addEventListener("click", (e) => {
           dec_btn.classList.add("hidden");         // hide "-"
           delete_icon.classList.remove("hidden");  // show trash
      }
+
+     // price logic
+     if (!item_price.dataset.basePrice) {
+          item_price.dataset.basePrice = item_price.textContent.replace("$", "");
+     }
+
+     let base_price = parseFloat(item_price.dataset.basePrice);
+
+     // now change the price 
+     item_price.textContent = "$" + (base_price * item_quantity);
+
+
 
      // delete item if click on delete_icon
      if (e.target.classList.contains("delete_icon")) {
