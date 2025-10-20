@@ -43,9 +43,9 @@ Array.from(shop_carts).forEach(cart_btn => {
 
           itemcount.innerHTML = parseInt(itemcount.innerHTML) + 1
 
+          // disable card btn
           cart_btn.disabled = true;
           if (cart_btn.disabled) return
-
      })
 })
 
@@ -82,8 +82,24 @@ Array.from(shop_carts).forEach(cart_btn => {
     </div>
   </div>
   `)
+  
+           // logic for total amount
+           updateTotal()
      })
 })
+
+function updateTotal() {
+  let total_amount = document.querySelector(".total_sec .total");
+  let items_price = document.querySelectorAll(".item .item_price");
+  let sum_prices = 0;
+
+  items_price.forEach(price => {
+    let ind_price = parseFloat(price.textContent.replace("$", ""));
+    sum_prices += ind_price;
+  });
+
+  total_amount.textContent = "$" + sum_prices.toFixed(2);
+}
 
 
 // add listener to inc and dec btn
@@ -105,6 +121,8 @@ item_section.addEventListener("click", (e) => {
      if (e.target.closest(".increase")) {
           item_quantity++;
           quantityDiv.innerHTML = item_quantity;
+          // updating total price after increasing item
+          updateTotal()
      }
 
      // Decrease
@@ -112,6 +130,8 @@ item_section.addEventListener("click", (e) => {
           if (item_quantity > 1) {
                item_quantity--;
                quantityDiv.innerHTML = item_quantity;
+                 // updating total price after decreasing item
+          updateTotal()
 
           }
      }
@@ -141,8 +161,11 @@ item_section.addEventListener("click", (e) => {
      if (e.target.classList.contains("delete_icon")) {
           e.target.closest(".item").remove()
      }
+
+
 });
 
+// correct total price concept 
 
 
 
