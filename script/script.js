@@ -82,23 +82,23 @@ Array.from(shop_carts).forEach(cart_btn => {
     </div>
   </div>
   `)
-  
-           // logic for total amount
-           updateTotal()
+
+          // logic for total amount
+          updateTotal()
      })
 })
 
 function updateTotal() {
-  let total_amount = document.querySelector(".total_sec .total");
-  let items_price = document.querySelectorAll(".item .item_price");
-  let sum_prices = 0;
+     let total_amount = document.querySelector(".total_sec .total");
+     let items_price = document.querySelectorAll(".item .item_price");
+     let sum_prices = 0;
 
-  items_price.forEach(price => {
-    let ind_price = parseFloat(price.textContent.replace("$", ""));
-    sum_prices += ind_price;
-  });
+     items_price.forEach(price => {
+          let ind_price = parseFloat(price.textContent.replace("$", ""));
+          sum_prices += ind_price;
+     });
 
-  total_amount.textContent = "$" + sum_prices.toFixed(2);
+     total_amount.textContent = "$" + sum_prices.toFixed(2);
 }
 
 
@@ -116,11 +116,19 @@ item_section.addEventListener("click", (e) => {
      // Convert to number each time
      let item_quantity = Number(quantityDiv.innerHTML);
 
+     // price logic : baseprice
+     if (!item_price.dataset.basePrice) {
+          item_price.dataset.basePrice = item_price.textContent.replace("$", "");
+     }
+
+     let base_price = parseFloat(item_price.dataset.basePrice);
 
      // Increase
      if (e.target.closest(".increase")) {
           item_quantity++;
           quantityDiv.innerHTML = item_quantity;
+          // first update individual price 
+          item_price.textContent = "$" + (base_price * item_quantity).toFixed(2);
           // updating total price after increasing item
           updateTotal()
      }
@@ -130,8 +138,10 @@ item_section.addEventListener("click", (e) => {
           if (item_quantity > 1) {
                item_quantity--;
                quantityDiv.innerHTML = item_quantity;
-                 // updating total price after decreasing item
-          updateTotal()
+               // first update individual price 
+               item_price.textContent = "$" + (base_price * item_quantity).toFixed(2);
+               // then updating total price after decreasing item
+               updateTotal()
 
           }
      }
@@ -145,27 +155,29 @@ item_section.addEventListener("click", (e) => {
           delete_icon.classList.remove("hidden");  // show trash
      }
 
-     // price logic
-     if (!item_price.dataset.basePrice) {
-          item_price.dataset.basePrice = item_price.textContent.replace("$", "");
-     }
-
-     let base_price = parseFloat(item_price.dataset.basePrice);
-
-     // now change the price 
-     item_price.textContent = "$" + (base_price * item_quantity);
 
 
 
      // delete item if click on delete_icon
      if (e.target.classList.contains("delete_icon")) {
+          // first enable card btn of that item
+          let item_name = e.target.closest(".item").querySelector(".item_name")
+          Array.from(shop_carts).find(btn => {
+               let btn_pro_name = btn.closest(".product-cart").querySelector(".product-name")
+               if (btn_pro_name === item_name) {
+                    btn.closest("product-card").disabled = false
+               }
+          })
+          //    then remove that item from shooping card
           e.target.closest(".item").remove()
+          //   update total 
+          updateTotal()
      }
 
 
 });
 
-// correct total price concept 
+
 
 
 
