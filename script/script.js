@@ -37,22 +37,12 @@ card_cross.addEventListener("click", () => {
 let shop_carts = document.querySelectorAll(".shop-cart")
 let itemcount = document.querySelector(".itemcount")
 
+
 Array.from(shop_carts).forEach(cart_btn => {
      cart_btn.addEventListener("click", () => {
-
-
-          itemcount.innerHTML = parseInt(itemcount.innerHTML) + 1
-
           // disable card btn
-          cart_btn.disabled = true;
-          if (cart_btn.disabled) return
-     })
-})
+     cart_btn.disabled = true;
 
-
-// add event for saving items to shopping card
-Array.from(shop_carts).forEach(cart_btn => {
-     cart_btn.addEventListener("click", () => {
           let product_card = cart_btn.closest(".product-card")
           let product_price = product_card.querySelector(".product-price").textContent
           let product_pic = product_card.querySelector("img").src
@@ -82,11 +72,21 @@ Array.from(shop_carts).forEach(cart_btn => {
     </div>
   </div>
   `)
+  
 
           // logic for total amount
           updateTotal()
+          // now updating itemcount
+          let selected_items = Array.from(document.querySelectorAll(".item_section .item"))
+          itemcount.innerHTML = selected_items.length
      })
+
+
 })
+
+
+
+
 
 function updateTotal() {
      let total_amount = document.querySelector(".total_sec .total");
@@ -162,16 +162,20 @@ item_section.addEventListener("click", (e) => {
      if (e.target.classList.contains("delete_icon")) {
           // first enable card btn of that item
           let item_name = e.target.closest(".item").querySelector(".item_name")
-          Array.from(shop_carts).find(btn => {
-               let btn_pro_name = btn.closest(".product-cart").querySelector(".product-name")
-               if (btn_pro_name === item_name) {
-                    btn.closest("product-card").disabled = false
+          Array.from(shop_carts).forEach(btn => {
+               let btn_pro_name = btn.closest(".product-card").querySelector(".product-name")
+               if (btn_pro_name.textContent === item_name.textContent) {
+                    btn.disabled = false
                }
           })
           //    then remove that item from shooping card
           e.target.closest(".item").remove()
           //   update total 
           updateTotal()
+
+            // now updating itemcount
+          let selected_items = Array.from(document.querySelectorAll(".item_section .item"))
+          itemcount.innerHTML = selected_items.length
      }
 
 
