@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100vw;
+}
+/* brand name style */
+.brand_name{
+    font-family: cursive;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* main_content */
+.main_content{
+    width: 100%;
+    background-color: rgba(113, 113, 113, 0.11);
+    min-height: 80vh;
+    margin: auto;
+    padding: 0px 40px;
+}
+/* checkout styling */
+.checkout_div{
+     background-color: aqua;
+}
