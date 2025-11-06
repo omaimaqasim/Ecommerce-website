@@ -11,7 +11,8 @@
 body {
     max-width: 100vw;
 }
-.flex{
+
+.flex {
     display: flex;
     flex-direction: column;
 }
@@ -27,7 +28,6 @@ body {
 /* main_content */
 .main_content {
     width: 100%;
-    background-color: rgba(113, 113, 113, 0.11);
     margin: auto;
     padding: 0px 40px;
     display: flex;
@@ -37,53 +37,99 @@ body {
 
 /* checkout styling */
 .checkout_div {
-    background-color: aqua;
     width: 100%;
     max-width: 700px;
     min-height: 85vh;
     padding: 35px;
     border-radius: 10px;
-   
+   box-shadow: 0px 1px 8px 4px #c0bdbdb0;
+
 }
 
 .checkout_div h1 {
     padding: 10px 0px;
     font-size: 2.5rem;
 }
-.checkout_div h2{
+
+.checkout_div h2 {
     font-size: 1.5rem;
     padding: 12px 0px;
 }
 
-.checkout_div input{
+.checkout_div input {
     height: 40px;
     padding: 20px 10px;
     font-size: 17px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border: 2px solid rgba(60, 60, 60, 0.545); 
+    border: 2px solid rgba(60, 60, 60, 0.545);
 }
-.checkout_div label{
-    padding:4px;
+
+.checkout_div label {
+    padding: 4px;
     font-size: 18px;
 }
 
-.sec2{
+.sec2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
 }
-.sec2 input{
+
+.sec2 input {
     width: 300px;
 }
+
+.place_order {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #dd5bef;
+    border: 2px solid #e568e5;
+    font-weight: 600;
+    width: 50%;
+    border: none;
+    background-color: rgb(138, 91, 239);
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 7px #7c7ce8;
+    cursor: pointer;
+}
+.place_order:hover{
+     transform: scale(1.03);
+        background-color: rgb(150, 104, 251);
+}
+
+.place_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+
+}
+
+/* styling item section */
+.items_div{
+    background-color: rgba(198, 188, 249, 0.437);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-height: 250px;
+    min-height: 250px;
+    width: 30vw;
+    overflow: auto;
+    border-radius: 5px;
+}
+
 
 
 
 /* media query for 790 */
 
 @media (max-width : 790px) {
-   .sec2 input{
-    width: 100%;
-   }
+    .sec2 input {
+        width: 100%;
+    }
 }
