@@ -14,3 +14,7 @@ Use overflow-x: auto; or scroll; when horizontal scroll is intended. -->
 <!--  flex-shrink: 0; this property tell to not shrink element with its width -->
 
 <!-- we use event integration when after reload that element is not present but late it will present if you want to add event for that element then you have to apply event to its parent so when you click that parents child element then check if that child is you target element then you can easy apply -->
+
+
+
+
