@@ -43,9 +43,13 @@ form.addEventListener("submit",(e)=>{
   if (CVV.value === "") {
     CVV.nextElementSibling.innerHTML = "please enter CVV"
   }
+
+  // if all are full 
+  if ( allinputs.every(input=> input.value.trim() !== "")) {
+    alert("Order placed successfully!") 
+  }
  
-//   validate the form
-    // allinputs.every(input=> input.value.trim() !== "") ? alert("Order placed successfully!") correct thsi soon
+
    
 })
 

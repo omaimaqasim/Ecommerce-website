@@ -1,0 +1,4 @@
+i made a mistake that i use position absolute for item div in checkout page but did not use 
+position relative in check div its parent thats why it is moving when screen is resizing as 
+it is positioned to page after adding relative in checkout it position to checkout 
+
