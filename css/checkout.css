@@ -61,7 +61,7 @@ body {
 .checkout_div input {
     height: 40px;
     padding: 20px 10px;
-    font-size: 17px;
+    font-size: 15px;
     margin-bottom: 2px;
     border-radius: 5px;
     border: 2px solid rgba(60, 60, 60, 0.545);
@@ -78,6 +78,7 @@ body {
 
 .sec2 {
     display: flex;
+    gap: 15px;
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
@@ -156,7 +157,7 @@ body {
 @media (max-width : 840px) {
    .items_div{
     position: static;
-    width: 85%;
+    width: 100%;
     margin: auto;
     margin-top: 20px;
    }
@@ -164,4 +165,17 @@ body {
 .customer_info input{
     width: 100%;
 }
+}
+
+@media (max-width : 580px) {
+
+  .main_content{
+    padding: 7px;
+  }
+  .checkout_div label{
+    font-size: 15px;
+  }
+  .checkout_div {
+    padding: 25px;
+  }
 }
