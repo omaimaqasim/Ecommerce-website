@@ -19,7 +19,7 @@ form.addEventListener("submit",(e)=>{
 
   // if all are full 
   if ( allinputs.every(input=> input.value.trim() !== "")) {
-    alert("Order placed successfully!") 
+   
     window.location.href = "thankyou.html"
     // reset form
        form.reset();
