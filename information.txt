@@ -1,4 +1,9 @@
+MISTAKE 01 :
 i made a mistake that i use position absolute for item div in checkout page but did not use 
 position relative in check div its parent thats why it is moving when screen is resizing as 
 it is positioned to page after adding relative in checkout it position to checkout 
 
+MISTAKE 02:
+❗ Never use justify-content: center on a scrollable container becaus it put top element on top and it will become invisible 
+9️⃣ Mental shortcut (easy to remember)
+🧠 Scrollable content = justify-content: flex-start
