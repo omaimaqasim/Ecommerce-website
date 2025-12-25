@@ -41,7 +41,7 @@ let itemcount = document.querySelector(".itemcount")
 Array.from(shop_carts).forEach(cart_btn => {
      cart_btn.addEventListener("click", () => {
           // disable card btn
-     cart_btn.disabled = true;
+          cart_btn.disabled = true;
 
           let product_card = cart_btn.closest(".product-card")
           let product_price = product_card.querySelector(".product-price").textContent
@@ -72,7 +72,7 @@ Array.from(shop_carts).forEach(cart_btn => {
     </div>
   </div>
   `)
-  
+
 
           // logic for total amount
           updateTotal()
@@ -173,7 +173,7 @@ item_section.addEventListener("click", (e) => {
           //   update total 
           updateTotal()
 
-            // now updating itemcount
+          // now updating itemcount
           let selected_items = Array.from(document.querySelectorAll(".item_section .item"))
           itemcount.innerHTML = selected_items.length
      }
@@ -181,6 +181,22 @@ item_section.addEventListener("click", (e) => {
 
 });
 
+
+// function for storing items data
+
+function saveCartToLocalStorage() {
+     let items = []
+     document.querySelectorAll(".item_section .item").forEach(item => {
+
+          items.push({
+               name: item.querySelector(".item_name").textContent,
+               price: item.querySelector(".item_price").textContent,
+               quantity: item.querySelector(".item_quantity").textContent,
+               img: item.querySelector(".item_pic img").src
+          })
+
+     })
+}
 
 
 
