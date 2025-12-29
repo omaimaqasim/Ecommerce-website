@@ -7,3 +7,7 @@ MISTAKE 02:
 ❗ Never use justify-content: center on a scrollable container becaus it put top element on top and it will become invisible 
 9️⃣ Mental shortcut (easy to remember)
 🧠 Scrollable content = justify-content: flex-start
+
+
+remember this localstorage store data in string form so that use setitem then convert js obj to string using json.stringyfy
+and for calling data to another  page first convert data to js obj using json.parse

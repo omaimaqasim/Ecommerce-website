@@ -30,3 +30,6 @@ form.addEventListener("submit",(e)=>{
 })
 
 
+const card_data = JSON.parse(localStorage.getItem("cart")|| [])
+console.log(card_data)
+
