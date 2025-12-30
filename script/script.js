@@ -6,6 +6,8 @@ let hamburger = document.querySelector(".heading img")
 let cross = document.querySelector(".sidebar img")
 let sidebar = document.querySelector(".sidebar")
 let info = document.querySelector(".info")
+const card_data = JSON.parse(localStorage.getItem("cart") || [])
+console.log(card_data)
 
 
 hamburger.addEventListener("click", (e) => {
@@ -49,14 +51,6 @@ Array.from(shop_carts).forEach(cart_btn => {
           let product_name = product_card.querySelector(".product-name").textContent
 
           // now adding item to shooping card
-          let item = {
-               name: product_name,
-               price: product_price,
-               quantity: 1,
-               img: product_pic
-          };
-          let item_section = document.querySelector(".item_section")
-          item_section.insertAdjacentHTML("afterbegin", create_item_card(item))
 
 
           // logic for total amount
@@ -196,6 +190,27 @@ function saveCartToLocalStorage() {
 
      localStorage.setItem("cart", JSON.stringify(items))
 }
+
+// // function for loading card from local storage
+
+// function loadCartFromLocalStorage() {
+//      let item_section = document.querySelector(".item_section");
+//      item_section.innerHTML = "";
+//      card_data.forEach(item => {
+
+//           let item = {
+//                name: item.name,
+//                price: item.price,
+//                quantity:item.quantity,
+//                img:item.img
+//           }
+
+//           item_section.insertAdjacentHTML("afterbegin",create_item_card(item));
+//           itemcount.textContent = cart.length;
+//           updateTotal();
+
+//      })
+// }
 
 
 

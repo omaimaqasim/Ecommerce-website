@@ -5,8 +5,8 @@ function create_item_card(item){
       <div class="item_pic">
         <img src="${item.img}" alt="">
       </div>
-      <div class="item_name"></div>
-      <div class="item_price">${product_price}</div>
+      <div class="item_name">${item.name}</div>
+      <div class="item_price">${item.price}</div>
       <div class="inc_dec_section">
         <span class="increase">+</span>
         <span class="item_quantity">${item.quantity}</span>
