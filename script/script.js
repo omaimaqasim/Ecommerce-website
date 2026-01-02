@@ -6,7 +6,7 @@ let hamburger = document.querySelector(".heading img")
 let cross = document.querySelector(".sidebar img")
 let sidebar = document.querySelector(".sidebar")
 let info = document.querySelector(".info")
-const card_data = JSON.parse(localStorage.getItem("cart") || [])
+const card_data = JSON.parse(localStorage.getItem("cart")) || []
 console.log(card_data)
 
 
@@ -61,6 +61,9 @@ Array.from(shop_carts).forEach(cart_btn => {
 
           // calling fn for storing data
           saveCartToLocalStorage()
+         
+
+          
      })
 
 
@@ -191,26 +194,28 @@ function saveCartToLocalStorage() {
      localStorage.setItem("cart", JSON.stringify(items))
 }
 
-// // function for loading card from local storage
+// function for loading card from local storage
 
-// function loadCartFromLocalStorage() {
-//      let item_section = document.querySelector(".item_section");
-//      item_section.innerHTML = "";
-//      card_data.forEach(item => {
+function loadCartFromLocalStorage(product_info) {
+     let item_section = document.querySelector(".item_section");
+     item_section.innerHTML = "";
+//    my next step will we making an obj in add to card clike name 
+// product info that contain img name price of that product so that i can use
+// that obj in this function as a parameter
 
-//           let item = {
-//                name: item.name,
-//                price: item.price,
-//                quantity:item.quantity,
-//                img:item.img
-//           }
+          let new_items = {
+               name: item.name,
+               price: item.price,
+               quantity:item.quantity,
+               img:item.img
+          }
 
-//           item_section.insertAdjacentHTML("afterbegin",create_item_card(item));
-//           itemcount.textContent = cart.length;
-//           updateTotal();
+          item_section.insertAdjacentHTML("afterbegin",create_item_card(new_items));
+          itemcount.textContent = card_data.length;
+          updateTotal();
 
-//      })
-// }
+
+}
 
 
 
