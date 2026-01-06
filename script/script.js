@@ -6,9 +6,12 @@ let hamburger = document.querySelector(".heading img")
 let cross = document.querySelector(".sidebar img")
 let sidebar = document.querySelector(".sidebar")
 let info = document.querySelector(".info")
-const card_data = JSON.parse(localStorage.getItem("cart")) || []
-console.log(card_data)
+let item_section = document.querySelector(".item_section");
 
+window.addEventListener("DOMContentLoaded",()=>{
+loadCartFromLocalStorage()
+//i was doing mistake of not making arrow fn in this
+} )
 
 hamburger.addEventListener("click", (e) => {
      document.querySelector(".info").style.display = "none"
@@ -46,12 +49,16 @@ Array.from(shop_carts).forEach(cart_btn => {
           cart_btn.disabled = true;
 
           let product_card = cart_btn.closest(".product-card")
-          let product_price = product_card.querySelector(".product-price").textContent
-          let product_pic = product_card.querySelector("img").src
-          let product_name = product_card.querySelector(".product-name").textContent
+          let product_info = {
+               price: product_card.querySelector(".product-price").textContent,
+               img: product_card.querySelector("img").src,
+               quantity: 1,
+               name: product_card.querySelector(".product-name").textContent
+          }
 
           // now adding item to shooping card
 
+          item_section.insertAdjacentHTML("afterbegin", create_item_card(product_info))
 
           // logic for total amount
           updateTotal()
@@ -61,9 +68,9 @@ Array.from(shop_carts).forEach(cart_btn => {
 
           // calling fn for storing data
           saveCartToLocalStorage()
-         
 
-          
+
+
      })
 
 
@@ -89,7 +96,7 @@ function updateTotal() {
 
 // add listener to inc and dec btn
 
-let item_section = document.querySelector(".item_section")
+
 
 item_section.addEventListener("click", (e) => {
      let section = e.target.closest(".inc_dec_section");
@@ -196,23 +203,24 @@ function saveCartToLocalStorage() {
 
 // function for loading card from local storage
 
-function loadCartFromLocalStorage(product_info) {
-     let item_section = document.querySelector(".item_section");
-     item_section.innerHTML = "";
-//    my next step will we making an obj in add to card clike name 
-// product info that contain img name price of that product so that i can use
-// that obj in this function as a parameter
+function loadCartFromLocalStorage() {
+     const cart_data = JSON.parse(localStorage.getItem("cart")) || []
 
+     cart_data.forEach(cart => {
           let new_items = {
-               name: item.name,
-               price: item.price,
-               quantity:item.quantity,
-               img:item.img
+               img: cart.img,
+               name: cart.name,
+               price: cart.price,
+               quantity: cart.quantity
           }
+          item_section.insertAdjacentHTML("afterbegin", create_item_card(new_items));
+      
+         
+     })
 
-          item_section.insertAdjacentHTML("afterbegin",create_item_card(new_items));
-          itemcount.textContent = card_data.length;
-          updateTotal();
+     // //ERROR IS IN THIS FN
+     itemcount.textContent = cart_data.length;
+     updateTotal();
 
 
 }
