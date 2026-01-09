@@ -8,10 +8,8 @@ let sidebar = document.querySelector(".sidebar")
 let info = document.querySelector(".info")
 let item_section = document.querySelector(".item_section");
 
-window.addEventListener("DOMContentLoaded",()=>{
-loadCartFromLocalStorage()
-//i was doing mistake of not making arrow fn in this
-} )
+//this line mean when dom is loaded run the fn name localcart
+window.addEventListener("DOMContentLoaded",loadCartFromLocalStorage)
 
 hamburger.addEventListener("click", (e) => {
      document.querySelector(".info").style.display = "none"
@@ -218,7 +216,7 @@ function loadCartFromLocalStorage() {
          
      })
 
-     // //ERROR IS IN THIS FN
+
      itemcount.textContent = cart_data.length;
      updateTotal();
 
