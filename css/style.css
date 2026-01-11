@@ -342,12 +342,16 @@
         gap: 20px;
         justify-content: center;
     }
+    .products-sec{
+        background-color: rgba(213, 184, 232, 0.144);
+    }
 
     .product-card {
         display: flex;
         flex-direction: column;
         border: solid rgba(44, 43, 43, 0.21);
         border-radius: 4px;
+        background-color: white;
     }
 
     .product-card>* {
@@ -602,13 +606,23 @@
     }
 
     .view_all button{
-            padding: 2px 5px;
+            padding: 4px 22px;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 5px;
-    border: 2px solid #5c5c7c75;
+    border-radius: 3px;
+    background-color: rgba(134, 55, 237, 0.776);
+         border: 2px solid rgba(134, 55, 237, 0.776);
+        color: white;
     cursor: pointer;
+    transition: all 0.2s ease-in;
     }
+
+     .view_all button:hover{
+        background-color: rgba(255, 255, 255, 0.776);
+         border: 2px solid rgba(134, 55, 237, 0.776);
+        color: rgba(134, 55, 237, 0.776);
+     }
+
 
 
 
