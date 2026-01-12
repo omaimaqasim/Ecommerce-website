@@ -343,7 +343,7 @@
         justify-content: center;
     }
     .products-sec{
-        background-color: rgba(213, 184, 232, 0.144);
+        background-color: rgba(213, 184, 232, 0.246);
     }
 
     .product-card {
@@ -622,6 +622,32 @@
          border: 2px solid rgba(134, 55, 237, 0.776);
         color: rgba(134, 55, 237, 0.776);
      }
+
+    /* special service */
+
+    .special_services{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+        gap: 10px;
+        padding: 15px;
+    }
+    .special_services img{
+        width: 70px;
+    }
+
+    .service{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid black;
+
+    }
+
+
 
 
 
