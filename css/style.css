@@ -53,7 +53,7 @@
         transition: all 0.2s ease-in;
     }
 
-    .sidebar h1 {
+     h1 {
         font-family: var(--main-font-style)
     }
 
@@ -236,7 +236,7 @@
 
 
     .categories-sec h1,
-    .products-sec h1 {
+    .products-sec h1 , .why_us h1 {
         text-align: center;
         padding: 20px;
         font-family: cursive;
@@ -342,7 +342,8 @@
         gap: 20px;
         justify-content: center;
     }
-    .products-sec{
+
+    .products-sec {
         background-color: rgba(213, 184, 232, 0.246);
     }
 
@@ -567,9 +568,10 @@
         text-align: center;
         transition: all 0.2s ease;
     }
-    .checkout a{
+
+    .checkout a {
         text-decoration: none;
-         color: white;
+        color: white;
         font-size: 1.1rem;
         font-weight: 500;
     }
@@ -600,51 +602,62 @@
 
     /* view all btn */
 
-    .view_all{
-      text-align: center;  
-      padding: 20px 0px;
+    .view_all {
+        text-align: center;
+        padding: 20px 0px;
     }
 
-    .view_all button{
-            padding: 4px 22px;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 3px;
-    background-color: rgba(134, 55, 237, 0.776);
-         border: 2px solid rgba(134, 55, 237, 0.776);
+    .view_all button {
+        padding: 4px 22px;
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 3px;
+        background-color: rgba(134, 55, 237, 0.776);
+        border: 2px solid rgba(134, 55, 237, 0.776);
         color: white;
-    cursor: pointer;
-    transition: all 0.2s ease-in;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
     }
 
-     .view_all button:hover{
+    .view_all button:hover {
         background-color: rgba(255, 255, 255, 0.776);
-         border: 2px solid rgba(134, 55, 237, 0.776);
+        border: 2px solid rgba(134, 55, 237, 0.776);
         color: rgba(134, 55, 237, 0.776);
-     }
+    }
 
     /* special service */
 
-    .special_services{
+    .special_services {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 2px solid black;
-        gap: 10px;
-        padding: 15px;
-    }
-    .special_services img{
-        width: 70px;
+        gap: 35px;
+        padding: 25px;
     }
 
-    .service{
+    .special_services img {
+        width: 60px;
+        padding-bottom: 10px;
+    }
+    .service h2{
+        font-size: 20px;
+        font-family: cursive;
+    }
+    .service p{
+        font-size: 12px;
+    }
+
+    .service {
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 10px 30px;
         align-items: center;
         justify-content: center;
-        border: 2px solid black;
 
+    }
+    .shipping img{
+     width: 70px;
+     padding: 0px;
     }
 
 
