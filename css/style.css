@@ -661,6 +661,33 @@
     }
 
 
+    /* footer */
+
+    footer{
+       background-color: #b4b4b4;
+        width: 100%;
+    }
+    footer p{
+        text-align: center;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .information{
+        background-color: #b4b4b4;
+        padding: 34px;
+    }
+    .information h1{
+        font-size: 1.6rem;
+    }
+    
+    .stay_touch h2{
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 6px 0px;
+    }
+
+
 
 
 
