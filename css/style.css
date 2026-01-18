@@ -53,7 +53,7 @@
         transition: all 0.2s ease-in;
     }
 
-     h1 {
+    h1 {
         font-family: var(--main-font-style)
     }
 
@@ -236,7 +236,8 @@
 
 
     .categories-sec h1,
-    .products-sec h1 , .why_us h1 {
+    .products-sec h1,
+    .why_us h1 {
         text-align: center;
         padding: 20px;
         font-family: cursive;
@@ -639,11 +640,13 @@
         width: 60px;
         padding-bottom: 10px;
     }
-    .service h2{
+
+    .service h2 {
         font-size: 20px;
         font-family: cursive;
     }
-    .service p{
+
+    .service p {
         font-size: 12px;
     }
 
@@ -655,36 +658,89 @@
         justify-content: center;
 
     }
-    .shipping img{
-     width: 70px;
-     padding: 0px;
+
+    .shipping img {
+        width: 70px;
+        padding: 0px;
     }
 
 
     /* footer */
 
-    footer{
-       background-color: #b4b4b4;
+    footer {
+        background-color: #b4b4b4;
         width: 100%;
     }
-    footer p{
+
+    footer p {
         text-align: center;
         padding: 10px;
         font-size: 0.8rem;
     }
 
-    .information{
+    .information {
         background-color: #b4b4b4;
         padding: 34px;
     }
-    .information h1{
+
+    .information h1 {
         font-size: 1.6rem;
     }
-    
-    .stay_touch h2{
-        font-size: 1.1rem;
+
+    .first {
+        width: 30%;
+    }
+
+    .stay_touch{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        padding-top: 20px;
+    }
+    .stay_touch h2 {
+        font-size: 18px;
         font-weight: 500;
         padding: 6px 0px;
+        padding-bottom: 0px;
+        
+    }
+
+    .stay_touch p {
+        font-size: 14px;
+    }
+
+    .email{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fcfafa00;
+        width: 85%;
+        border: 2px solid rgb(94, 93, 93);
+        margin-top: 20px;
+        
+        
+    }
+    .email button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+
+    }
+    .email input{
+        padding: 6px 0px;
+        width: 85%;
+        border: none;
+        font-size: 14px;
+        background-color: #ffffff00;
+        outline: none;
+    }
+
+    .email input::placeholder{
+        color: rgb(47, 46, 46);
     }
 
 
