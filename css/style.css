@@ -679,15 +679,17 @@
     }
 
     .information {
-        background-color: #b4b4b457;
+         background-color: #b4b4b457;
         padding: 14px 34px;
+        display: flex;
+        align-items: center;
     }
 
     .information h1 {
         font-size: 1.6rem;
     }
 
-    .first {
+    .fourth  {
         width: 30%;
     }
 
@@ -749,13 +751,12 @@
         justify-content: center;
         gap: 10px;
         width: 80%;
-        border: 2px solid black;
     }
 
     .social button {
         padding: 10px;
         border-radius: 50%;
-        border: 2px solid black;
+        border: 2px solid rgb(92, 92, 92);
         background-color: #b4b4b413;
         display: flex;
         align-items: center;
@@ -768,10 +769,30 @@
         border: 2px solid rgba(134, 55, 237, 0.776);
         transform: translateY(-10%);
     }
-
+    .social svg{
+        transition: all 0.3s ease-in;
+        width: 22px;
+        height: 22px;
+    }
 .social button:hover svg{
-    background-color: rgba(134, 55, 237, 0.776);
+      stroke: rgba(134, 55, 237, 0.776)
 }
+
+/* first contact info  */
+
+.contact_info .icon  {
+    color: purple;
+    width: 30px;
+}
+.no , .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+
+
 
 
 
