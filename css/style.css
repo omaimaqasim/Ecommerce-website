@@ -780,7 +780,7 @@
 
 /* first contact info  */
 
-.contact_info .icon  {
+.contact_div .icon  {
     color: purple;
     width: 30px;
 }
@@ -795,9 +795,8 @@
     width: 100%;
     padding-bottom: 5px;
 }
-.no , .email_n {
+.no , .email_n, .customer_service {
     display: flex;
-    align-items: center;
     justify-content: flex-start;
     gap: 10px;
 }
@@ -809,9 +808,19 @@
 }
 .contact_info{
     display: flex;
+    padding-top: 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.contact_div h2{
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0px 3px;
+}
+
+.customer_service{
+    display: flex;
 }
 
 

@@ -122,6 +122,7 @@ body {
 .items_div {
     background-color: rgba(198, 188, 249, 0.437);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
@@ -135,6 +136,9 @@ body {
     top: 107px;
     right: 32px;
 }
+.item{
+  background-color: rgba(198, 188, 249, 0.277);
+}
 
 /* error */
 .error {
@@ -143,10 +147,6 @@ body {
     font-weight: 500;
     padding: 0px 3px;
 }
-
-
-
-
 
 
 /* media query for 790 */

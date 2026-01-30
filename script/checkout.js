@@ -1,4 +1,14 @@
 
+let item_div = document.querySelector(".items_div");
+
+//this line mean when dom is loaded run the fn name localcart
+window.addEventListener("DOMContentLoaded", () => {
+     loadCartFromLocalStorage(item_div)
+})
+
+// next goal is to make all item features work ?
+item_features(item_div)
+
 // all inputs
 let allinputs = Array.from(document.querySelectorAll("form input"))
 // hadling checkout btn
@@ -28,6 +38,8 @@ form.addEventListener("submit",(e)=>{
 
    
 })
+
+
 
 
 const card_data = JSON.parse(localStorage.getItem("cart")) || []
