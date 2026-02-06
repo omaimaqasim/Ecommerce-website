@@ -680,9 +680,10 @@
 
     .information {
          background-color: #b4b4b457;
+         justify-content: space-between;
         padding: 34px;
         display: flex;
-       gap: 20px;
+     
     }
     .information> *{
         padding: 10px;
@@ -702,7 +703,7 @@
         justify-content: center;
         gap: 6px;
     }
-    .stay_touch h2 , .support h2 {
+    .stay_touch h2 , .support h2 , .about h2  {
         font-size: 18px;
         font-weight: 500;
         padding: 6px 0px;
@@ -782,13 +783,14 @@
 /* first contact info  */
 
 .contact_div .icon  {
-    color: purple;
-    width: 30px;
+     color: rgb(90, 3, 119);
+    width: 25px;
 }
 .contact_div{
     display: flex;
     align-items: start;
     flex-direction: column;
+    font-size: 0.9rem;
 }
 .contact_info >*{
     width: 100%;
@@ -816,6 +818,7 @@
     font-weight: 500;
     font-size: 1.2rem;
     padding: 0px 3px;
+    padding-top: 4px;
 }
 .email_n p , .no p{
     cursor: pointer;
@@ -825,26 +828,33 @@
     display: flex;
 }
 
-.support h2{
+.support h2 , .about h2{
    padding-bottom: 10px;
 }
 
-.support ul {
+.support ul , .about ul {
     list-style: none;
     font-size: 14px;
     
 }
-.support li{
-    padding-bottom: 8px;
+.support li , .about li{
+    padding-bottom: 20px;
 }
 
-.support ul li a{
+.support ul li a, .about ul li a{
     text-decoration: none;
     color: black;
 transition: all 0.3s ease;
     
 }
-.support ul li a:hover{
+.support ul li a:hover , .about ul li a:hover {
+ color: rgba(134, 55, 237, 0.776);
+}
+
+.no p , .email_n p{
+    transition: all 0.3s ease-in-out;
+}
+.no p:hover , .email_n p:hover{
  color: rgba(134, 55, 237, 0.776);
 }
 

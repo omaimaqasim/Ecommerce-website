@@ -187,6 +187,7 @@ function item_features(item_section) {
 item_features(item_section)
 
 
+
 // function for storing items data
 
 function saveCartToLocalStorage() {
