@@ -680,13 +680,18 @@
 
     .information {
          background-color: #b4b4b457;
-         justify-content: space-between;
         padding: 34px;
-        display: flex;
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr 1.5fr;
+       column-gap: 15px;
      
     }
+  
+
+    
     .information> *{
         padding: 10px;
+        
     }
 
     .information h1 {
@@ -694,9 +699,11 @@
     }
 
     .fourth  {
-        width: 30%;
+        width: 100%;
     }
 
+ 
+    
     .stay_touch{
         display: flex;
         flex-direction: column;
@@ -890,11 +897,11 @@ transition: all 0.3s ease;
         }
 
         .head h1 {
-            font-size: 40px;
+            font-size: 35px;
         }
 
         .sub-head p {
-            font-size: 15px;
+            font-size: 13px;
         }
 
         .left button {
@@ -930,4 +937,11 @@ transition: all 0.3s ease;
             grid-template-columns: repeat(1, 300px);
 
         }
+    }
+
+        @media (max-width:940px) {
+      
+            .information{
+                grid-template-columns: 1fr 1fr;
+            }
     }
