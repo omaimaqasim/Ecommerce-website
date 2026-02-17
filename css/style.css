@@ -650,9 +650,10 @@
         font-size: 12px;
     }
 
-    .service {
+    .servicesss {
         display: flex;
         flex-direction: column;
+        gap: 3px;
         padding: 10px 30px;
         align-items: center;
         justify-content: center;
@@ -943,5 +944,36 @@ transition: all 0.3s ease;
       
             .information{
                 grid-template-columns: 1fr 1fr;
+              
             }
+    }
+
+      @media (max-width:630px) {
+      
+          .social button{
+            padding: 7px;
+          }
+          .social svg {
+            width: 18px;
+            height: 18px;
+          }
+    }
+      @media (max-width:540px) {
+      
+        .information h2{
+            font-size: 1rem;
+        }
+        .information p{
+            font-size: 0.75rem;
+        }
+        .contact_div .icon {
+            width: 20px;
+        }
+        .first{
+            gap: 6px;
+        }
+
+        .servicesss{
+            gap: 6px;
+        }
     }
