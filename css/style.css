@@ -957,11 +957,15 @@ transition: all 0.3s ease;
             width: 18px;
             height: 18px;
           }
+
     }
       @media (max-width:540px) {
       
         .information h2{
             font-size: 1rem;
+        }
+        .information{
+            padding: 10px ;
         }
         .information p{
             font-size: 0.75rem;
@@ -972,8 +976,33 @@ transition: all 0.3s ease;
         .first{
             gap: 6px;
         }
+        .social button {
+            padding: 5px;
+        }
+        .social svg{
+            width: 15px;
+            height: 15px;
+        }
+        .social{
+            padding: 24px 0px;
+        }
+        .email input{
+            padding: 6px;
+        }
 
         .servicesss{
             gap: 6px;
         }
+    }
+
+         @media (max-width:460px) {
+      
+        .information{
+            padding-right: 0px;
+        }
+        .information .fourth{
+            padding-right: 0px;
+        }
+
+
     }
