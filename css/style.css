@@ -650,11 +650,10 @@
         font-size: 12px;
     }
 
-    .servicesss {
+    .service{
         display: flex;
         flex-direction: column;
-        gap: 3px;
-        padding: 10px 30px;
+        padding: 20px 10px;
         align-items: center;
         justify-content: center;
 
@@ -911,55 +910,70 @@ transition: all 0.3s ease;
         }
 
     }
-
-    @media (max-width:680px) {
-        .icons img {
-            width: 20px;
-        }
-
-        .heading h1 {
-            font-size: 27px;
-        }
-
-        .heading img {
-            width: 25px;
-        }
-    }
-
+    
     @media (max-width:1020px) {
         .products {
             grid-template-columns: repeat(2, 300px);
-
+            
         }
     }
-
+    
+    
+    @media (max-width:940px) {
+        
+        .information{
+            grid-template-columns: 1fr 1fr;
+            
+        }
+    }
+    
+    
+    
+    @media (max-width:730px) {
+        
+        .why_us h1{
+            font-size: 1.9rem;
+        }
+        .special_services{
+            flex-direction: column;
+        }
+    }
+    
+    
+        @media (max-width:680px) {
+            .icons img {
+                width: 20px;
+            }
+    
+            .heading h1 {
+                font-size: 27px;
+            }
+    
+            .heading img {
+                width: 25px;
+            }
+        }
     @media (max-width:666px) {
         .products {
             grid-template-columns: repeat(1, 300px);
 
         }
     }
+    @media (max-width:630px) {
+        
+        .social button{
+          padding: 7px;
+        }
+        .social svg {
+          width: 18px;
+          height: 18px;
+        }
 
-        @media (max-width:940px) {
-      
-            .information{
-                grid-template-columns: 1fr 1fr;
-              
-            }
-    }
-
-      @media (max-width:630px) {
-      
-          .social button{
-            padding: 7px;
+  }
+    @media (max-width:540px) {
+          .why_us h1{
+              font-size: 1.2rem;
           }
-          .social svg {
-            width: 18px;
-            height: 18px;
-          }
-
-    }
-      @media (max-width:540px) {
       
         .information h2{
             font-size: 1rem;
@@ -979,6 +993,7 @@ transition: all 0.3s ease;
         .social button {
             padding: 5px;
         }
+
         .social svg{
             width: 15px;
             height: 15px;
@@ -993,16 +1008,37 @@ transition: all 0.3s ease;
         .servicesss{
             gap: 6px;
         }
-    }
 
-         @media (max-width:460px) {
-      
-        .information{
-            padding-right: 0px;
+        .second li a , .third li a{
+           font-size: 12px;
         }
-        .information .fourth{
-            padding-right: 0px;
+        .email {
+            width: 93%;
         }
-
-
+        .stay_touch h2{
+            font-size: 0.8rem;
+        }
     }
+    @media (max-width:460px) {
+ 
+   .information{
+       padding-right: 0px;
+   }
+   .information .fourth{
+       padding-right: 0px;
+   }
+
+   .stay_touch p{
+       font-size: 0.7rem;
+   }
+
+   .stay_touch .email input {
+       padding: 4px;
+       font-size: 12px;
+   }
+      .why_us h1{
+       font-size: 1.3rem;
+   }
+
+
+}
