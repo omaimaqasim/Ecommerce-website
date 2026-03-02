@@ -958,6 +958,9 @@ transition: all 0.3s ease;
             grid-template-columns: repeat(1, 300px);
 
         }
+        .categories-sec h1 , .products-sec h1{
+            font-size: 34px;
+        }
     }
     @media (max-width:630px) {
         
@@ -968,13 +971,27 @@ transition: all 0.3s ease;
           width: 18px;
           height: 18px;
         }
+        .head h1{
+            font-size: 28px;
+        }
+        .sub-head p{
+            font-size: 12px;
+        }
+        .left button {
+            font-size: 12px;
+        }
 
   }
     @media (max-width:540px) {
           .why_us h1{
               font-size: 1.2rem;
           }
-      
+      .heading h1 {
+        font-size: 22px;
+      }
+      .heading img{
+        width: 22px;
+      }
         .information h2{
             font-size: 1rem;
         }
@@ -986,6 +1003,10 @@ transition: all 0.3s ease;
         }
         .contact_div .icon {
             width: 20px;
+        }
+
+         .categories-sec h1 , .products-sec h1{
+            font-size: 30px;
         }
         .first{
             gap: 6px;
@@ -1018,6 +1039,14 @@ transition: all 0.3s ease;
         .stay_touch h2{
             font-size: 0.8rem;
         }
+
+        .hero-section{
+            justify-content: center;
+        }
+        .hero-section .left{
+            width: 75%;
+            position: static;
+        }
     }
     @media (max-width:460px) {
  
@@ -1037,7 +1066,7 @@ transition: all 0.3s ease;
        font-size: 12px;
    }
       .why_us h1{
-       font-size: 1.3rem;
+       font-size: 1.35rem;
    }
 
 
