@@ -37,6 +37,11 @@
         top: 0;
     }
 
+     .nav .heading img{
+            width: 28px;
+        }
+
+
     /* Sidebar */
     .sidebar {
         position: fixed;
@@ -1046,6 +1051,23 @@ transition: all 0.3s ease;
         .hero-section .left{
             width: 75%;
             position: static;
+        }
+
+        .nav .icons{
+            gap: 9px;
+        }
+        
+
+        .nav .icons svg{
+            width: 18px;
+        }
+
+       
+        .nav .heading h1{
+            font-size: 20px;
+        }
+        .nav {
+            padding: 20px 0px;
         }
     }
     @media (max-width:460px) {
