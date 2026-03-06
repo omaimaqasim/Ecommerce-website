@@ -167,3 +167,33 @@ body{
 .delete_icon:hover {
   transform: scale(1.2);
 }
+
+    @media (max-width:580px) {
+     .thankyou_cont{
+      min-width: 410px;
+
+     }
+     .thankyou_cont > h1{
+      font-size: 22px;
+     }
+     .message p , .comment , .order_summary p{
+      font-size: 13px;
+     }
+     .message img{
+      width: 24px;
+      height: 24px;
+     }
+     .order_summary h1{
+      font-size: 18px;
+     }
+      .order_summary .total{
+        font-size: 16px;
+      }
+      .cont_div{
+        font-size: 15px;
+        padding: 12px;
+        margin-top: 4px;
+      }
+    
+    }
+    
