@@ -197,3 +197,16 @@ body{
     
     }
     
+        @media (max-width:380px) {
+
+          .thankyou_cont{
+            min-width : 340px;
+            padding: 20px 15px;
+          }
+          .comment{
+            font-size: 11px;
+          }
+          .cont_div{
+            font: 13px;
+          }
+        }

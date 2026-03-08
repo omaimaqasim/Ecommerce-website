@@ -97,6 +97,8 @@ body {
     border: 2px solid #e568e5;
     font-weight: 600;
     width: 50%;
+    max-width: 240px;
+    min-width: 145px;
     border: none;
     background-color: rgb(138, 91, 239);
     transition: all 0.3s ease;
@@ -149,13 +151,7 @@ body {
 }
 
 
-/* media query for 790 */
 
-@media (max-width : 790px) {
-    .sec2 input {
-        width: 100%;
-    }
-}
 @media (max-width : 840px) {
    .items_div{
     position: static;
@@ -167,6 +163,15 @@ body {
 .customer_info input{
     width: 100%;
 }
+}
+
+@media (max-width : 790px) {
+    .sec2 input {
+        width: 100%;
+    }
+     .place_order{
+        font-size: 15px;
+    }
 }
 
 @media (max-width : 580px) {
@@ -181,3 +186,12 @@ body {
     padding: 25px;
   }
 }
+
+
+@media (max-width : 580px) {
+    .checkout_div .sec2{
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+

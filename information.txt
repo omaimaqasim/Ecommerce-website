@@ -38,6 +38,6 @@ functionName() → run now
 
 functionName → run later -->
 
-
+if you want to remove align item center then use stretch it is defalt valu of align it behave as align is not apply
 
 
