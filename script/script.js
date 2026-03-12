@@ -7,40 +7,54 @@ let cross = document.querySelector(".sidebar img")
 let sidebar = document.querySelector(".sidebar")
 let info = document.querySelector(".info")
 let item_section = document.querySelector(".item_section");
-
-//this line mean when dom is loaded run the fn name localcart
-window.addEventListener("DOMContentLoaded", () => {
-     loadCartFromLocalStorage(item_section)
-})
-
-hamburger.addEventListener("click", (e) => {
-     document.querySelector(".info").style.display = "none"
-     document.querySelector(".sidebar").style.left = "0px"
-
-})
-
-cross.addEventListener("click", (e) => {
-     document.querySelector(".sidebar").style.left = "-400px"
-
-})
-
-//  add a listener to shopping card
+let shop_carts = document.querySelectorAll(".shop-cart")
+let itemcount = document.querySelector(".itemcount")
 let shopping_icon = document.querySelector(".shopping_icon")
 let card_cross = document.querySelector(".my_card_section .cross")
 let my_card_section = document.querySelector(".my_card_section")
 
-shopping_icon.addEventListener("click", () => {
-     my_card_section.style.right = "0px"
+//this line mean when dom is loaded run the fn name localcart
+window.addEventListener("DOMContentLoaded", () => {
+    if (item_section) {
+         loadCartFromLocalStorage(item_section)
+    }
 })
 
-card_cross.addEventListener("click", () => {
-     my_card_section.style.right = "-550px"
-})
+//hamburger if false like null then it will not run
+if (hamburger) {
+     hamburger.addEventListener("click", (e) => {
+          document.querySelector(".info").style.display = "none"
+          document.querySelector(".sidebar").style.left = "0px"
+     
+     })
+     
+}
+
+if (cross) {
+     cross.addEventListener("click", (e) => {
+          document.querySelector(".sidebar").style.left = "-400px"
+     
+     })
+     
+}
+
+//  add a listener to shopping card
+
+if (shopping_icon) {
+     shopping_icon.addEventListener("click", () => {
+          my_card_section.style.right = "0px"
+     })
+}
+
+if (card_cross) {
+     card_cross.addEventListener("click", () => {
+          my_card_section.style.right = "-550px"
+     })
+     
+}
 
 //  add listener for shop_card icon in products sec
 
-let shop_carts = document.querySelectorAll(".shop-cart")
-let itemcount = document.querySelector(".itemcount")
 
 
 Array.from(shop_carts).forEach(cart_btn => {
@@ -82,6 +96,8 @@ Array.from(shop_carts).forEach(cart_btn => {
 
 function updateTotal() {
      let total_amount = document.querySelector(".total_sec .total");
+          if (!total_amount) return;   // stop if element doesn't exist
+
      let items_price = document.querySelectorAll(".item .item_price");
      let sum_prices = 0;
 
@@ -183,8 +199,10 @@ function item_features(item_section) {
      
      });
 }
-
-item_features(item_section)
+if (item_section) {
+     item_features(item_section)
+     
+}
 
 
 
@@ -223,10 +241,11 @@ function loadCartFromLocalStorage(item_section) {
          
      })
 
-
+if (itemcount) {
      itemcount.textContent = cart_data.length;
-     updateTotal();
-
+     
+}
+updateTotal();
 
 }
 

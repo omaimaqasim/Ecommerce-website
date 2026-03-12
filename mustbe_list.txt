@@ -1,0 +1,2 @@
+1. complete adding selected items in checkout and thankyou page
+
