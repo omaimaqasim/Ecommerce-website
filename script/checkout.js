@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
      loadCartFromLocalStorage(item_div)
 })
 
-// next goal is to make all item features work ?
+
 item_features(item_div)
 
 // all inputs

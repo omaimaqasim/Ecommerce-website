@@ -18,6 +18,8 @@
      if (item_section) {
           loadCartFromLocalStorage(item_section)
      }
+
+     disableButtonsAfterReload()
      })
 
      //hamburger if false like null then it will not run
@@ -202,6 +204,22 @@
      if (item_section) {
           item_features(item_section)
           
+     }
+
+     //disable btn
+     function disableButtonsAfterReload() {
+
+          const cart_data = JSON.parse(localStorage.getItem("cart")) || []
+          
+          Array.from(shop_carts).forEach(btn=>{
+               let name = btn.closest(".product-card").querySelector(".product-name").textContent;
+
+               let found = cart_data.find(item=>item.name === name);
+              
+               if (found) {
+                    btn.disabled = true;
+               }
+          })
      }
 
 

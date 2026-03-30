@@ -325,6 +325,9 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.317);
     }
 
+    .product-icons > *{
+        cursor: pointer;
+    }
 
     /* Category Card */
     .category-card h2 {
