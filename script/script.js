@@ -97,7 +97,7 @@
 
 
      function updateTotal() {
-          let total_amount = document.querySelector(".total_sec .total");
+          let total_amount = document.querySelector(".total");
                if (!total_amount) return;   // stop if element doesn't exist
 
           let items_price = document.querySelectorAll(".item .item_price");
@@ -195,7 +195,10 @@
           
                     // now updating itemcount
                     let selected_items = Array.from(document.querySelectorAll(".item_section .item"))
-                    itemcount.innerHTML = selected_items.length
+                    
+                    if (itemcount) {   
+                         itemcount.innerHTML = selected_items.length
+                    }
                }
           
           

@@ -2,104 +2,109 @@
 
 /* remeber this for getting selected items use local storage and for same styling just connect css file on each website */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.thankyou_cont{
-  margin: 20px;
-    box-shadow: 0px 1px 8px 4px #c0bdbdb0;
-    background-color: #ececec5a;
-    width: 50%;
-    max-width: 720px;
-    min-width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px 25px;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
-.thankyou_cont>h1{
+
+.thankyou_cont {
+  margin: 20px;
+  box-shadow: 0px 1px 8px 4px #c0bdbdb0;
+  background-color: #ececec5a;
+  width: 50%;
+  max-width: 720px;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 25px;
+}
+
+.thankyou_cont>h1 {
   font-family: cursive;
 }
-.order_summary{
-    background-color: rgb(255, 255, 255);
-    padding: 15px 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 80%;
-    gap: 10px;
-    overflow-y: auto;
-    max-height: 300px;
-    border-radius: 10px;
-         box-shadow: 0px 1px 2px 2px #c0bdbd78;
+
+.order_summary {
+  background-color: rgb(255, 255, 255);
+  padding: 15px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%;
+  gap: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 2px 2px #c0bdbd78;
 }
-.order_summary h1{
-      font-family: cursive;
-    font-size: 1.6rem;
+
+.order_summary h1 {
+  font-family: cursive;
+  font-size: 1.6rem;
 }
-.total{
+
+.total {
 
   align-self: self-end;
 }
+
 .comment {
   margin-top: 14px;
 }
-.message{
+
+.message {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2px;
 }
-.message img{
+
+.message img {
   width: 35px;
   height: 35px;
 }
 
 .cont_div {
-    font-size: 18px;
-    text-align: center;
-    padding: 15px 20px;
-    border-radius: 6px;
-    background-color: #dd5bef;
-    border: 2px solid #e568e5;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.967);
-    border: none;
-    background-color: rgb(138, 91, 239);
-    transition: all 0.3s ease;
-    box-shadow: 0px 0px 7px #7c7ce8;
-    cursor: pointer;
-    margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 6px;
+  background-color: #dd5bef;
+  border: 2px solid #e568e5;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.967);
+  border: none;
+  background-color: rgb(138, 91, 239);
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 7px #7c7ce8;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 .cont_div:hover {
-    transform: scale(1.03);
-    background-color: rgb(150, 104, 251);
+  transform: scale(1.03);
+  background-color: rgb(150, 104, 251);
 }
+
 /* items */
-.items{
+.items {
   width: 100%;
 }
+
 .item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 12px;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.539);
   border-radius: 6px;
   margin-bottom: 15px;
   width: 100%;
@@ -168,45 +173,86 @@ body{
   transform: scale(1.2);
 }
 
-    @media (max-width:580px) {
-     .thankyou_cont{
-      min-width: 410px;
+.total_section {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
-     }
-     .thankyou_cont > h1{
-      font-size: 22px;
-     }
-     .message p , .comment , .order_summary p{
-      font-size: 13px;
-     }
-     .message img{
-      width: 24px;
-      height: 24px;
-     }
-     .order_summary h1{
-      font-size: 18px;
-     }
-      .order_summary .total{
-        font-size: 16px;
-      }
-      .cont_div{
-        font-size: 15px;
-        padding: 12px;
-        margin-top: 4px;
-      }
-    
-    }
-    
-        @media (max-width:380px) {
+.inc_dec_section {
+  display: none;
+}
 
-          .thankyou_cont{
-            min-width : 340px;
-            padding: 20px 15px;
-          }
-          .comment{
-            font-size: 11px;
-          }
-          .cont_div{
-            font: 13px;
-          }
-        }
+@media (max-width:1100px) {
+
+  .item_pic img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .item_pic {
+    width: 60px;
+    height: 60px;
+  }
+
+  .order_summary {
+    width: 100%;
+  }
+}
+
+@media (max-width:580px) {
+  .thankyou_cont {
+    min-width: 410px;
+
+  }
+
+  .thankyou_cont>h1 {
+    font-size: 22px;
+  }
+
+  .message p,
+  .comment,
+  .order_summary p {
+    font-size: 13px;
+  }
+
+  .message img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .order_summary h1 {
+    font-size: 18px;
+  }
+
+  .order_summary .total {
+    font-size: 16px;
+  }
+
+  .cont_div {
+    font-size: 15px;
+    padding: 12px;
+    margin-top: 4px;
+  }
+
+}
+
+@media (max-width:380px) {
+
+  .thankyou_cont {
+    min-width: 340px;
+    padding: 20px 15px;
+  }
+
+  .comment {
+    font-size: 11px;
+  }
+
+  .cont_div {
+    font: 13px;
+  }
+
+  .item_name {
+    font-size: 12px;
+  }
+}
