@@ -41,3 +41,5 @@ functionName → run later -->
 if you want to remove align item center then use stretch it is defalt valu of align it behave as align is not apply
 
 
+bug:If the container height is smaller than the total items height, and you use justify-content: center, then items can get hidden.
+debug:remove justify content center 
