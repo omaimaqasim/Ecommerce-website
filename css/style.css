@@ -37,9 +37,9 @@
         top: 0;
     }
 
-     .nav .heading img{
-            width: 28px;
-        }
+    .nav .heading img {
+        width: 28px;
+    }
 
 
     /* Sidebar */
@@ -325,7 +325,7 @@
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.317);
     }
 
-    .product-icons > *{
+    .product-icons>* {
         cursor: pointer;
     }
 
@@ -354,6 +354,7 @@
 
     .products-sec {
         background-color: rgba(213, 184, 232, 0.246);
+        padding: 20px 0px;
     }
 
     .product-card {
@@ -611,24 +612,22 @@
 
     /* view all btn */
 
-    .view_all {
-        text-align: center;
-        padding: 20px 0px;
-    }
 
-    .view_all button {
-        padding: 4px 22px;
+    .view_all {
+        display: block;
+        margin: 30px auto;
         font-size: 1rem;
         font-weight: 500;
-        border-radius: 3px;
         background-color: rgba(134, 55, 237, 0.776);
-        border: 2px solid rgba(134, 55, 237, 0.776);
         color: white;
         cursor: pointer;
-        transition: all 0.2s ease-in;
+        padding: 4px 22px;
+        border-radius: 3px;
+        border: 2px solid rgba(134, 55, 237, 0.776);
+        transition: 0.2s ease-in;
     }
 
-    .view_all button:hover {
+    .view_all:hover {
         background-color: rgba(255, 255, 255, 0.776);
         border: 2px solid rgba(134, 55, 237, 0.776);
         color: rgba(134, 55, 237, 0.776);
@@ -658,7 +657,7 @@
         font-size: 12px;
     }
 
-    .service{
+    .service {
         display: flex;
         flex-direction: column;
         padding: 20px 10px;
@@ -675,62 +674,64 @@
 
     /* footer */
 
-    footer {
-         background-color: #b4b4b457;
-        width: 100%;
-    }
+   
 
-    footer p {
+    .copyright {
+        background-color: #b4b4b457;
+        width: 100%;
         text-align: center;
         padding: 10px;
         font-size: 0.8rem;
     }
 
     .information {
-         background-color: #b4b4b457;
+        background-color: #b4b4b457;
         padding: 34px;
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr 1.5fr;
-       column-gap: 15px;
-     
-    }
-  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1.5fr;
+        column-gap: 15px;
 
-    
-    .information> *{
+    }
+
+
+
+    .information>* {
         padding: 10px;
-        
+
     }
 
     .information h1 {
         font-size: 1.6rem;
     }
 
-    .fourth  {
+    .fourth {
         width: 100%;
     }
 
- 
-    
-    .stay_touch{
+
+
+    .stay_touch {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 6px;
     }
-    .stay_touch h2 , .support h2 , .about h2  {
+
+    .stay_touch h2,
+    .support h2,
+    .about h2 {
         font-size: 18px;
         font-weight: 500;
         padding: 6px 0px;
         padding-bottom: 0px;
-        
+
     }
 
     .stay_touch p {
         font-size: 14px;
     }
 
-    .email{
+    .email {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -738,10 +739,11 @@
         width: 85%;
         border: 2px solid rgb(94, 93, 93);
         margin-top: 20px;
-        
-        
+
+
     }
-    .email button{
+
+    .email button {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -750,7 +752,8 @@
         border: none;
 
     }
-    .email input{
+
+    .email input {
         padding: 6px 0px;
         width: 85%;
         border: none;
@@ -759,10 +762,11 @@
         outline: none;
     }
 
-    .email input::placeholder{
+    .email input::placeholder {
         color: rgb(47, 46, 46);
     }
-    .social{
+
+    .social {
         padding: 36px 0px;
         display: flex;
         align-items: center;
@@ -782,96 +786,117 @@
         transition: all 0.3s ease-in;
     }
 
-    .social button:hover{
+    .social button:hover {
         border: 2px solid rgba(134, 55, 237, 0.776);
         transform: translateY(-10%);
     }
-    .social svg{
+
+    .social svg {
         transition: all 0.3s ease-in;
         width: 22px;
         height: 22px;
     }
-.social button:hover svg{
-      stroke: rgba(134, 55, 237, 0.776)
-}
 
-/* first contact info  */
+    .social button:hover svg {
+        stroke: rgba(134, 55, 237, 0.776)
+    }
 
-.contact_div .icon  {
-     color: rgb(90, 3, 119);
-    width: 25px;
-}
-.contact_div{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    font-size: 0.9rem;
-}
-.contact_info >*{
-    width: 100%;
-    padding-bottom: 5px;
-}
-.no , .email_n, .customer_service {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-}
+    /* first contact info  */
 
-.email_n {
-    border: none;
-    margin-top: 0px;
-    font: 14px;
-}
-.contact_info{
-    display: flex;
-    padding-top: 10px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.contact_div h2{
-    font-weight: 500;
-    font-size: 1.2rem;
-    padding: 0px 3px;
-    padding-top: 4px;
-}
-.email_n p , .no p{
-    cursor: pointer;
-}
+    .contact_div .icon {
+        color: rgb(90, 3, 119);
+        width: 25px;
+    }
 
-.customer_service{
-    display: flex;
-}
+    .contact_div {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        font-size: 0.9rem;
+    }
 
-.support h2 , .about h2{
-   padding-bottom: 10px;
-}
+    .contact_info>* {
+        width: 100%;
+        padding-bottom: 5px;
+    }
 
-.support ul , .about ul {
-    list-style: none;
-    font-size: 14px;
-    
-}
-.support li , .about li{
-    padding-bottom: 20px;
-}
+    .no,
+    .email_n,
+    .customer_service {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+    }
 
-.support ul li a, .about ul li a{
-    text-decoration: none;
-    color: black;
-transition: all 0.3s ease;
-    
-}
-.support ul li a:hover , .about ul li a:hover {
- color: rgba(134, 55, 237, 0.776);
-}
+    .email_n {
+        border: none;
+        margin-top: 0px;
+        font: 14px;
+    }
 
-.no p , .email_n p{
-    transition: all 0.3s ease-in-out;
-}
-.no p:hover , .email_n p:hover{
- color: rgba(134, 55, 237, 0.776);
-}
+    .contact_info {
+        display: flex;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact_div h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0px 3px;
+        padding-top: 4px;
+    }
+
+    .email_n p,
+    .no p {
+        cursor: pointer;
+    }
+
+    .customer_service {
+        display: flex;
+    }
+
+    .support h2,
+    .about h2 {
+        padding-bottom: 10px;
+    }
+
+    .support ul,
+    .about ul {
+        list-style: none;
+        font-size: 14px;
+
+    }
+
+    .support li,
+    .about li {
+        padding-bottom: 20px;
+    }
+
+    .support ul li a,
+    .about ul li a {
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease;
+
+    }
+
+    .support ul li a:hover,
+    .about ul li a:hover {
+        color: rgba(134, 55, 237, 0.776);
+    }
+
+    .no p,
+    .email_n p {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .no p:hover,
+    .email_n p:hover {
+        color: rgba(134, 55, 237, 0.776);
+    }
 
 
 
@@ -918,181 +943,210 @@ transition: all 0.3s ease;
         }
 
     }
-    
+
     @media (max-width:1020px) {
         .products {
             grid-template-columns: repeat(2, 300px);
-            
+
         }
     }
-    
-    
+
+
     @media (max-width:940px) {
-        
-        .information{
+
+        .information {
             grid-template-columns: 1fr 1fr;
-            
+
         }
     }
-    
-    
-    
+
+
+
     @media (max-width:730px) {
-        
-        .why_us h1{
+
+        .why_us h1 {
             font-size: 1.9rem;
         }
-        .special_services{
+
+        .special_services {
             flex-direction: column;
         }
     }
-    
-    
-        @media (max-width:680px) {
-            .icons img {
-                width: 20px;
-            }
-    
-            .heading h1 {
-                font-size: 27px;
-            }
-    
-            .heading img {
-                width: 25px;
-            }
+
+
+    @media (max-width:680px) {
+        .icons img {
+            width: 20px;
         }
+
+        .heading h1 {
+            font-size: 27px;
+        }
+
+        .heading img {
+            width: 25px;
+        }
+    }
+
     @media (max-width:666px) {
         .products {
             grid-template-columns: repeat(1, 300px);
 
         }
-        .categories-sec h1 , .products-sec h1{
+
+        .categories-sec h1,
+        .products-sec h1 {
             font-size: 34px;
         }
     }
+
     @media (max-width:630px) {
-        
-        .social button{
-          padding: 7px;
+
+        .social button {
+            padding: 7px;
         }
+
         .social svg {
-          width: 18px;
-          height: 18px;
+            width: 18px;
+            height: 18px;
         }
-        .head h1{
+
+        .head h1 {
             font-size: 28px;
         }
-        .sub-head p{
+
+        .sub-head p {
             font-size: 12px;
         }
+
         .left button {
             font-size: 12px;
         }
 
-  }
+    }
+
     @media (max-width:540px) {
-          .why_us h1{
-              font-size: 1.2rem;
-          }
-      .heading h1 {
-        font-size: 22px;
-      }
-      .heading img{
-        width: 22px;
-      }
-        .information h2{
+        .why_us h1 {
+            font-size: 1.2rem;
+        }
+
+        .heading h1 {
+            font-size: 22px;
+        }
+
+        .heading img {
+            width: 22px;
+        }
+
+        .information h2 {
             font-size: 1rem;
         }
-        .information{
-            padding: 10px ;
+
+        .information {
+            padding: 10px;
         }
-        .information p{
+
+        .information p {
             font-size: 0.75rem;
         }
+
         .contact_div .icon {
             width: 20px;
         }
 
-         .categories-sec h1 , .products-sec h1{
+        .categories-sec h1,
+        .products-sec h1 {
             font-size: 30px;
         }
-        .first{
+
+        .first {
             gap: 6px;
         }
+
         .social button {
             padding: 5px;
         }
 
-        .social svg{
+        .social svg {
             width: 15px;
             height: 15px;
         }
-        .social{
+
+        .social {
             padding: 24px 0px;
         }
-        .email input{
+
+        .email input {
             padding: 6px;
         }
 
-        .servicesss{
+        .servicesss {
             gap: 6px;
         }
 
-        .second li a , .third li a{
-           font-size: 12px;
+        .second li a,
+        .third li a {
+            font-size: 12px;
         }
+
         .email {
             width: 93%;
         }
-        .stay_touch h2{
+
+        .stay_touch h2 {
             font-size: 0.8rem;
         }
 
-        .hero-section{
+        .hero-section {
             justify-content: center;
         }
-        .hero-section .left{
+
+        .hero-section .left {
             width: 75%;
             position: static;
         }
 
-        .nav .icons{
+        .nav .icons {
             gap: 9px;
         }
-        
 
-        .nav .icons svg{
+
+        .nav .icons svg {
             width: 18px;
         }
 
-       
-        .nav .heading h1{
+
+        .nav .heading h1 {
             font-size: 20px;
         }
+
         .nav {
             padding: 20px 0px;
         }
     }
+
     @media (max-width:460px) {
- 
-   .information{
-       padding-right: 0px;
-   }
-   .information .fourth{
-       padding-right: 0px;
-   }
 
-   .stay_touch p{
-       font-size: 0.7rem;
-   }
+        .information {
+            padding-right: 0px;
+        }
 
-   .stay_touch .email input {
-       padding: 4px;
-       font-size: 12px;
-   }
-      .why_us h1{
-       font-size: 1.35rem;
-   }
+        .information .fourth {
+            padding-right: 0px;
+        }
+
+        .stay_touch p {
+            font-size: 0.7rem;
+        }
+
+        .stay_touch .email input {
+            padding: 4px;
+            font-size: 12px;
+        }
+
+        .why_us h1 {
+            font-size: 1.35rem;
+        }
 
 
-}
+    }

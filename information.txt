@@ -43,3 +43,9 @@ if you want to remove align item center then use stretch it is defalt valu of al
 
 bug:If the container height is smaller than the total items height, and you use justify-content: center, then items can get hidden.
 debug:remove justify content center 
+
+
+SEMANTIC TAGS :
+"Am I using this only for layout or grouping?" then use div
+
+inline block : actual inline but we can set width height and padding
