@@ -1,2 +1,5 @@
-1. complete adding selected items in checkout and thankyou page
 
+
+make you intro section left side div responsive for small screen 
+
+add some links for buttons 
